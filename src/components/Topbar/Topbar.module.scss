@@ -8,13 +8,13 @@
   width: 100%;
   position: sticky;
   top: 0;
-  height: s.$big;
+  height: s.$medium;
   padding: s.$nano;
   box-sizing: border-box;
   align-self: flex-start;
 
   &__date {
-    font-size: s.$tiny;
+    font-size: s.$micro;
     margin: 0;
     text-align: center;
   }
@@ -31,11 +31,11 @@
 
 .themeButton {
   border: none;
-  min-width: s.$medium;
-  min-height: s.$medium;
-  max-width: s.$medium;
-  max-height: s.$medium;
-  border-radius: s.$medium;
+  min-width: s.$small;
+  min-height: s.$small;
+  max-width: s.$small;
+  max-height: s.$small;
+  border-radius: s.$small;
   cursor: pointer;
 
   &--dark {

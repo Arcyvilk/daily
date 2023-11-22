@@ -1,16 +1,16 @@
 @use 'styles/sizes.scss' as s;
 
 .icon {
-  min-height: s.$tiny;
-  max-height: s.$tiny;
+  min-height: s.$micro;
+  max-height: s.$micro;
 
   svg {
     display: block;
     margin: 0 auto;
-    min-height: s.$tiny;
-    max-height: s.$tiny;
-    height: s.$tiny;
-    width: s.$tiny;
+    min-height: s.$micro;
+    max-height: s.$micro;
+    height: s.$micro;
+    width: s.$micro;
     path {
       fill: currentColor;
     }

@@ -46,7 +46,8 @@
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
-    font-size: s.$tiny;
+    font-size: s.$micro;
+    letter-spacing: 0.7px;
     padding: s.$nano;
     cursor: pointer;
   
@@ -65,6 +66,7 @@
 .section {
   &__title {
     margin: 0;
+    font-size: s.$tiny;
   }
   &__tiles {
     display: flex;

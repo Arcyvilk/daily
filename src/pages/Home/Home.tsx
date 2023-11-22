@@ -31,6 +31,12 @@ const Gallery = () => {
 
   return (
     <div className={s.gallery}>
+      <a
+        href={link}
+        target="_blank"
+        className={`${s.gallery__link} ${[s[`gallery__link--${theme}`]]}`}>
+        Plan for {day} before {period}
+      </a>
       <div className={s.gallery__section}>
         <h2 className={s.section__title}>Select day</h2>
         <div className={s.section__tiles}>
@@ -66,12 +72,6 @@ const Gallery = () => {
           })}
         </div>
       </div>
-      <a
-        href={link}
-        target="_blank"
-        className={`${s.gallery__link} ${[s[`gallery__link--${theme}`]]}`}>
-        Go to {day} before {period}
-      </a>
     </div>
   );
 };
