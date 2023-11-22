@@ -5,19 +5,18 @@ import { useAppContext } from 'context';
 import { Button } from 'components';
 import s from './Login.module.scss';
 
-const users = [
-  {
-    username: process.env.REACT_APP_USERNAME,
-    pwd: process.env.REACT_APP_PWD,
-  },
-];
-
 export const Login = (): JSX.Element => {
   const { setIsLoggedIn } = useAppContext();
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [pwd, setPwd] = useState('');
 
+  const users = [
+    {
+      username: process.env.REACT_APP_USERNAME,
+      pwd: process.env.REACT_APP_PWD,
+    },
+  ];
   console.log(users);
 
   const onClick = () => {

@@ -8,7 +8,10 @@ type Props = {
 export const ButtonLink = ({ label, link }: Props) => {
   const { theme } = useAppContext();
   return (
-    <a href={link} className={`${s.buttonLink} ${[s[`buttonLink--${theme}`]]}`}>
+    <a
+      href={link}
+      target="_blank"
+      className={`${s.buttonLink} ${[s[`buttonLink--${theme}`]]}`}>
       {label}
     </a>
   );
