@@ -16,13 +16,13 @@ export const Plan = (): JSX.Element => {
   useLogin();
 
   const [searchParams] = useSearchParams();
-  const day: string = searchParams.get('day') ?? Object.keys(days)[0];
+  const day = searchParams.get('day');
   const period = searchParams.get('period');
 
-  const src = `${days[day]}#${period}`;
+  const src = day && period ? `${days[day]}#${period}` : null;
 
   useEffect(() => {
-    window.location.href = src;
+    if (src) window.location.href = src;
   }, []);
 
   return <div>Loading...</div>;
