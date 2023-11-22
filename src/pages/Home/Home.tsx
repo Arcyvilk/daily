@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import { useAppContext } from 'context';
 import { Topbar } from 'components';
@@ -21,7 +21,7 @@ export const Home = (): JSX.Element => {
             <Route path="/login" element={<Login />} />
             <Route path="/daily" element={<Gallery />} />
             <Route path="/daily/plan" element={<Plan />} />
-            {/* <Route path="*" element={<Navigate to="/daily" />}></Route> */}
+            <Route path="/" element={<Navigate to="/daily" />}></Route>
           </Routes>
         </BrowserRouter>
       </div>

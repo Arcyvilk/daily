@@ -17,7 +17,6 @@ export const Login = (): JSX.Element => {
       pwd: process.env.REACT_APP_PWD,
     },
   ];
-  console.log(users);
 
   const onClick = () => {
     if (users.some(user => user.username === username && user.pwd === pwd)) {
