@@ -1,12 +1,11 @@
 import { createRoot } from 'react-dom/client';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
-import { GlobalStyle } from 'styles/GlobalStyle';
 import AppContextProvider from 'context';
 
 import { App } from 'pages/App';
 
-import './index.css';
+import './styles/index.scss';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -30,7 +29,6 @@ const Root = () => {
   return (
     <QueryClientProvider client={queryClient}>
       {/* <ReactQueryDevtools initialIsOpen={false} /> */}
-      <GlobalStyle />
       <App />
     </QueryClientProvider>
   );

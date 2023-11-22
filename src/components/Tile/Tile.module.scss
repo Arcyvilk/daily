@@ -1,0 +1,43 @@
+@use '../../styles/colors.scss' as c;
+@use '../../styles/sizes.scss' as s;
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin: s.$nano;
+  box-sizing: border-box;
+  border: none;
+  border-radius: s.$nano;
+  text-decoration: none;
+  cursor: pointer;
+
+  &__title {
+    font-size: s.$micro;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+  }
+  
+  &--dark, &:hover.tile--light {
+    background-color: c.$secondary-bg__dark;
+    color: c.$primary-text__dark;
+  }
+
+  &--light, &:hover.tile--dark {
+    background-color: c.$secondary-bg__light;
+    color: c.$primary-text__light;
+  }
+
+  &--active.tile--dark {
+    // box-shadow: 0 0 10px 3px c.$shadow__dark;
+    border: 3px solid c.$shadow__dark;
+  }
+
+  &--active.tile--light {
+    // box-shadow: 0 0 10px 3px c.$shadow__light;
+    border: 3px solid c.$shadow__light;
+  }
+}

@@ -1,0 +1,18 @@
+@use 'styles/sizes.scss' as s;
+
+.icon {
+  min-height: s.$tiny;
+  max-height: s.$tiny;
+
+  svg {
+    display: block;
+    margin: 0 auto;
+    min-height: s.$tiny;
+    max-height: s.$tiny;
+    height: s.$tiny;
+    width: s.$tiny;
+    path {
+      fill: currentColor;
+    }
+  }
+}

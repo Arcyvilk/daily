@@ -1,1 +1,1 @@
-export type ThemeType = 'dark' | 'light';
+export type Theme = 'dark' | 'light';

@@ -1,0 +1,49 @@
+@use '../../styles/colors.scss' as c;
+@use '../../styles/sizes.scss' as s;
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  height: s.$big;
+  padding: s.$nano;
+  box-sizing: border-box;
+  align-self: flex-start;
+
+  &__date {
+    font-size: s.$tiny;
+    margin: 0;
+    text-align: center;
+  }
+
+  &--dark {
+    background-color: c.$secondary-bg__dark;
+    color: c.$secondary-text__dark;
+  }
+  &--light {
+    background-color: c.$secondary-bg__light;
+    color: c.$secondary-text__light;
+  }
+}
+
+.themeButton {
+  border: none;
+  min-width: s.$medium;
+  min-height: s.$medium;
+  max-width: s.$medium;
+  max-height: s.$medium;
+  border-radius: s.$medium;
+  cursor: pointer;
+
+  &--dark {
+    background-color: c.$primary-bg__dark;
+    color: c.$primary-text__dark;
+  }
+  &--light {
+    background-color: c.$primary-bg__light;
+    color: c.$primary-text__light;
+  }
+}
