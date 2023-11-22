@@ -1,8 +1,11 @@
 import React, { useState, useContext } from 'react';
 
 import { Theme } from 'types';
+import { useLocalStorage } from 'utils/useLocalStorage';
 
 type ContextType = {
+  isLoggedIn: { isLoggedIn: boolean };
+  setIsLoggedIn: (isLoggedIn: { isLoggedIn: boolean }) => void;
   theme: Theme;
   setTheme: (theme: Theme) => void;
 };
@@ -12,9 +15,14 @@ type Props = {
 
 const AppContextProvider = ({ children }: Props): JSX.Element => {
   const defaultTheme: Theme = 'dark';
+  const [isLoggedIn, setIsLoggedIn] = useLocalStorage('isLoggedIn', {
+    isLoggedIn: false,
+  });
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
   const value = {
+    isLoggedIn,
+    setIsLoggedIn,
     theme,
     setTheme,
   };

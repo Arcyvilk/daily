@@ -17,6 +17,11 @@
     font-size: s.$micro;
     margin: 0;
     text-align: center;
+
+    a {
+      text-decoration: dotted underline;
+      color: white;
+    }
   }
 
   &--dark {

@@ -1,0 +1,23 @@
+@use '../../styles/colors.scss' as c;
+@use '../../styles/sizes.scss' as s;
+
+.buttonLink {
+  border-radius: s.$nano;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: s.$micro;
+  letter-spacing: 0.7px;
+  padding: s.$nano;
+  cursor: pointer;
+
+  &--dark {
+    background-color: c.$primary-bg__light;
+    color: c.$primary-text__light;
+  }
+  &--light {
+    background-color: c.$primary-bg__dark;
+    color: c.$primary-text__dark;
+  }
+}
