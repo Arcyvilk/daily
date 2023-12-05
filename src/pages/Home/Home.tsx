@@ -4,7 +4,6 @@ import { useAppContext } from 'context';
 import { Topbar } from 'components';
 import { Gallery } from 'pages/Gallery';
 import { Plan } from 'pages/Plan';
-import { Login } from 'pages/Login';
 
 import s from './Home.module.scss';
 
@@ -18,7 +17,6 @@ export const Home = (): JSX.Element => {
       <div className={s.main__content}>
         <BrowserRouter>
           <Routes>
-            <Route path="/login" element={<Login />} />
             <Route path="/daily" element={<Gallery />} />
             <Route path="/daily/plan" element={<Plan />} />
             <Route path="/" element={<Navigate to="/daily" />}></Route>

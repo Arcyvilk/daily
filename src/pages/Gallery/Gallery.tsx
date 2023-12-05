@@ -1,13 +1,10 @@
 import { useState } from 'react';
 import dayjs from 'dayjs';
 
-import { useLogin } from 'utils/useLogin';
 import { ButtonLink, Tile } from 'components';
 import s from './Gallery.module.scss';
 
 export const Gallery = () => {
-  useLogin();
-
   const [day, setDay] = useState<string>(getDayName(dayjs().day()));
   const [period, setPeriod] = useState<number>(getCurrentTimePeriod());
 

@@ -1,5 +1,4 @@
 import { useSearchParams } from 'react-router-dom';
-import { useLogin } from 'utils/useLogin';
 import { useEffect } from 'react';
 
 const days: Record<string, string> = {
@@ -13,8 +12,6 @@ const days: Record<string, string> = {
 };
 
 export const Plan = (): JSX.Element => {
-  useLogin();
-
   const [searchParams] = useSearchParams();
   const day = searchParams.get('day');
   const period = searchParams.get('period');
